@@ -1,0 +1,8 @@
+.choice{
+    border-radius: 25px;
+    background: #04AA6D;
+    padding: 20px;
+}
+.choice:hover{
+    cursor: pointer;
+}
