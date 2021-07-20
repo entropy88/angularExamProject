@@ -20,6 +20,8 @@ export class GameComponent {
 
         })
         this.chapters = resp;
+        //map choices to array
+        this.chapters.forEach(ch=>ch.choices=Object.entries(ch.choices))
       })
   }
 

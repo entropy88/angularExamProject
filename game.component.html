@@ -1,0 +1,15 @@
+<div class="container">
+
+<ul>Глави
+    <li *ngFor="let chapter of chapters">
+      {{chapter.chNumber}}
+      <br>
+  {{chapter.text}}
+  <br>
+  <p *ngFor="let choice of chapter.choices">{{choice[1]}}</p>
+
+    </li>
+
+  </ul>
+
+</div>
