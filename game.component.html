@@ -6,7 +6,12 @@
       <br>
   {{chapter.text}}
   <br>
-  <p *ngFor="let choice of chapter.choices">{{choice[1]}}</p>
+  <!-- <--!implement if there are no choices--> 
+ 
+    <div *ngFor="let choice of chapter.choices" class="choice"  >
+  <p>{{choice[1]}}</p>
+</div>
+ 
 
     </li>
 
