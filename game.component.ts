@@ -8,21 +8,15 @@ import { AngularFireDatabase } from '@angular/fire/database'
 })
 export class GameComponent {
 
-  chapters!: any[];
+  chapter!: any;
 
   constructor(db: AngularFireDatabase) {
-    db.list('/chapters')
-      .valueChanges()
-      .subscribe(resp => {
+    db.object('/chapters/0')
+    .valueChanges()
+    .subscribe(resp => {
+      this.chapter=resp;
+      this.chapter.choices=Object.entries(this.chapter.choices)
+    })
 
-
-        resp.forEach(r => {
-
-        })
-        this.chapters = resp;
-        //map choices to array
-        this.chapters.forEach(ch=>ch.choices=Object.entries(ch.choices))
-      })
   }
-
 }

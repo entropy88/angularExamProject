@@ -4,6 +4,8 @@
 <br>
 <!-- <--!implement if there are no choices-->
 
+
 <div *ngFor="let choice of chapter.choices">
-    <p class="choice">{{choice[1]}}</p>
+  <a  [routerLink]="[ '/chapters', chapter.choices[0][0]]">{{chapter.choices[0][1]}}</a>
+
 </div>

@@ -1,20 +1,6 @@
 <div class="container">
 
-<ul>Глави
-    <li *ngFor="let chapter of chapters">
-      {{chapter.chNumber}}
-      <br>
-  {{chapter.text}}
-  <br>
-  <!-- <--!implement if there are no choices--> 
- 
-    <div *ngFor="let choice of chapter.choices" >
-  <p class="choice">{{choice[1]}}</p>
-</div>
- 
-
-    </li>
-
-  </ul>
-
+<h1>Пролог</h1>
+<p>{{chapter.text}}</p>
+<a  [routerLink]="[ '/chapters', chapter.choices[0][0]]">{{chapter.choices[0][1]}}</a>
 </div>
